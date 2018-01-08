@@ -1,6 +1,6 @@
 {
   "name": "xls-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a webpack loader project",
   "main": "index.js",
   "scripts": {
