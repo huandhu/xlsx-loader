@@ -1,4 +1,6 @@
+
 <h2 align="center">Install</h2>
+
 ```bash
 npm install --save-dev xls-loader
 ```
