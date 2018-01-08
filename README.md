@@ -1,2 +1,26 @@
-# xlsx-loader
-a webpack excel loader
+<h2 align="center">Install</h2>
+```bash
+npm install --save-dev xls-loader
+```
+
+**webpack.config.js**
+```js
+module.exports = {
+  module: {
+    rules: [
+            {
+                test: /\.xls.?$/,
+                use: {
+                    loader: 'xls-loader'
+                }
+            }
+        ]
+    }
+}
+```
+
+<h2 align="center">Options</h2>
+
+|Name|Type|Default|Description|
+|:--:|:--:|:-----:|:----------|
+|**[`sheet`](#sheet)**|`{Number, String}`|`undefined`|a single sheet to json object|

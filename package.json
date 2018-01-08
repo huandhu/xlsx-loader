@@ -1,5 +1,5 @@
 {
-  "name": "webpack-excel-loader",
+  "name": "xls-loader",
   "version": "1.0.0",
   "description": "a webpack loader project",
   "main": "index.js",
