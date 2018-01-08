@@ -1,4 +1,4 @@
-import compiler from './compiler.js';
+import compiler from './compiler';
 
 test('Inserts name and outputs JavaScript', async () => {
   const stats = await compiler('example.xlsx', {sheet: 'sheet1'});

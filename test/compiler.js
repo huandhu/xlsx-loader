@@ -14,7 +14,7 @@ export default (fixture, options = {}) => {
             rules: [{
                 test: /\.xls.?$/,
                 use: {
-                    loader: path.resolve(__dirname, '../src/loader.js'),
+                    loader: path.resolve(__dirname, '../src/index'),
                     options
                 }
             }]
