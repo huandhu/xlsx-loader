@@ -13,10 +13,8 @@ export default (fixture, options = {}) => {
         module: {
             rules: [{
                 test: /\.xls.?$/,
-                use: {
-                    loader: path.resolve(__dirname, '../src/index'),
-                    options
-                }
+                loader: path.resolve(__dirname, '../src/index'),
+                options
             }]
         }
     });
