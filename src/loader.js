@@ -1,4 +1,4 @@
-import { getOptions } from 'loader-utils';
+import { urlToRequest } from 'loader-utils';
 import validateOptions from 'schema-utils';
 import xlsx from './json';
 
@@ -17,14 +17,11 @@ const schema = {
     },
     additionalProperties: true
 }
-
 export default function loader(source) {
-    const options = getOptions(this) || {};
-    validateOptions(schema, options, 'xlsx Loader');
-
-    source = JSON.stringify(xlsx.toJson(source, options.sheet || null))
+    const options = this.getOptions();
+    // validateOptions(schema, options, 'xlsx Loader');
+    source = JSON.stringify(xlsx.toJson(source, options))
         .replace(/\u2028/g, '\\u2028')
         .replace(/\u2029/g, '\\u2029')
-
     return `export default ${ source }`;
 }

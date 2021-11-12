@@ -41,8 +41,9 @@ class JSON_XLSX {
         return data
     }
 
-    toJson (source, sheet) {
+    toJson (source, options) {
         this.readFile(source);
+        let { sheet } = options;
         if (sheet) {
             return this.singleSheet(sheet)
         } else {
