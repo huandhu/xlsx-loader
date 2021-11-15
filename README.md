@@ -1,5 +1,6 @@
+这是一个 webpack loader 库, 用于将 excel 文件转换为 json 对象
 
-<h2 align="center">Install</h2>
+<h2 align="center">安装</h2>
 
 ```bash
 npm install --save-dev xls-loader
@@ -21,7 +22,7 @@ module.exports = {
 }
 ```
 
-<h2 align="center">Options</h2>
+<h2 align="center">配置</h2>
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
