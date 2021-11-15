@@ -25,8 +25,11 @@ module.exports = {
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**[`ReadOptions`](#https://github.com/SheetJS/sheetjs#parsing-options)**|`{Object}`|`undefined`|读取文件配置选项|
+|**[`ReadOptions`](#ReadOptions)**|`{Object}`|`undefined`|读取文件配置选项|
 |**[`parseOptions`](#parseOptions)**|`{Object、Array}`|`undefined`|解析json配置选项|
+
+### ReadOptions
+- 配置: https://github.com/SheetJS/sheetjs#parsing-options
 
 ### parseOptions
 - afterParseCallback: 提供解析完sheet 为 json后的回调，参数为解析后的json数据，可在此处编辑返回的json结果

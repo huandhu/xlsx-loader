@@ -1,6 +1,6 @@
 {
   "name": "excels-loader",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a webpack loader project",
   "main": "dist/index.js",
   "files": [
