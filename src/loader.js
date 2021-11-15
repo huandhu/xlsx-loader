@@ -1,5 +1,4 @@
-import { urlToRequest } from 'loader-utils';
-import validateOptions from 'schema-utils';
+import { validate } from 'schema-utils';
 import xlsx from './json';
 
 // Loader Mode
@@ -8,18 +7,52 @@ export const raw = true;
 const schema = {
     type: "object",
     properties: {
-        sheet: {
+        readOptions: {
+            type: 'object',
+            properties: {
+                sheetRows: {
+                    type: 'number',
+                },
+                sheets: {
+                    anyOf: [
+                        { type: "number" },
+                        { type: "string" },
+                        { type: "array" },
+                    ]
+                }
+            }
+        },
+        parseOptions: {
             anyOf: [
-                { type: "number" },
-                { type: "string" }
-            ]
+                { type: "object" },
+                { type: "array" },
+            ],
+            properties: {
+                range: {
+                    anyOf: [
+                        { type: "number" },
+                        { type: "string" },
+                    ],
+                },
+                header: {
+                    anyOf: [
+                        { type: "number" },
+                        { type: "string" },
+                        { type: "array" },
+                    ],
+                    afterParseCallback: {
+                        type: 'function'
+                    }
+                }
+            }
         }
     },
     additionalProperties: true
 }
+
 export default function loader(source) {
     const options = this.getOptions();
-    // validateOptions(schema, options, 'xlsx Loader');
+    validate(schema, options, { name: 'xlsx Loader' });
     source = JSON.stringify(xlsx.toJson(source, options))
         .replace(/\u2028/g, '\\u2028')
         .replace(/\u2029/g, '\\u2029')

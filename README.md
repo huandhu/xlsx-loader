@@ -25,4 +25,5 @@ module.exports = {
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**[`sheet`](#sheet)**|`{Number, String}`|`undefined`|a single sheet to json object|
+|**[`ReadOptions`](#https://github.com/SheetJS/sheetjs#parsing-options)**|`{Object}`|`undefined`|读取文件配置选项|
+|**[`parseOptions`](#sheet)**|`{Object、Array}`|`undefined`|解析json配置选项|
