@@ -53,6 +53,7 @@ const schema = {
 export default function loader(source) {
     const options = this.getOptions();
     validate(schema, options, { name: 'xlsx Loader' });
+    console.log('>>>> this.resourcePath', this.resourcePath)
     source = JSON.stringify(xlsx.toJson(source, options))
         .replace(/\u2028/g, '\\u2028')
         .replace(/\u2029/g, '\\u2029')

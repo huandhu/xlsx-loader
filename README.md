@@ -3,7 +3,7 @@
 <h2 align="center">安装</h2>
 
 ```bash
-npm install --save-dev xls-loader
+npm install --save-dev excels-loader
 ```
 
 **webpack.config.js**
@@ -14,7 +14,7 @@ module.exports = {
             {
                 test: /\.xls.?$/,
                 use: {
-                    loader: 'xls-loader'
+                    loader: 'excels-loader'
                 }
             }
         ]
