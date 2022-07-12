@@ -1,4 +1,6 @@
 
+## If webpack version >= 5 go to use [excels-loader](https://www.npmjs.com/package/excels-loader)
+
 <h2 align="center">Install</h2>
 
 ```bash
