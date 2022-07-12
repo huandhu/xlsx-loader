@@ -6,6 +6,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huandhu/xlsx-loader.git"
+  },
   "scripts": {
     "build": "babel src -d dist --copy-files",
     "test": "jest"
